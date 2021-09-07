@@ -4,31 +4,36 @@
 use std::io;
 
 fn main() {
-    println!("Press Control-c to exit the program.");
+    println!("Press Control-c to exit the program");
     loop {
         let mut temperature = String::new();
         let mut temp_type = String::new();
         let converted_temperature;
         let opposite_temp_type;
 
+        //User input for temperature type
         println!("Fahrenheit (F/f) or Celsius (C/c)?");
         io::stdin()
             .read_line(&mut temp_type)
             .expect("Failed to read line");
 
+        //trim the temperature, remove carrage return
         let temp_type = temp_type.trim();
 
+        //User input for temperature value
         println!("Pick a temperature value: ");
-        io::stdin() //11 will give error because it is not mutable
+        io::stdin()
             .read_line(&mut temperature)
             .expect("Failed to read line");
 
+        //parse string to f32
         let temperature: f32 = match temperature.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
         if temp_type == "f" || temp_type == "F" {
+            //convert to fahrenheit
             let temp_type: String = "Fahrenheit".to_string();
             opposite_temp_type = "Celsius".to_string();
             converted_temperature = to_fahrenheit_converter(temperature);
@@ -39,6 +44,7 @@ fn main() {
                 converted_temperature,
             );
         } else if temp_type == "c" || temp_type == "C" {
+            //convert to celsius
             let temp_type: String = "Celsius".to_string();
             opposite_temp_type = "Fahrenheit".to_string();
             converted_temperature = to_celsius_converter(temperature);
