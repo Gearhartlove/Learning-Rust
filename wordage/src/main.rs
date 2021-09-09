@@ -24,19 +24,18 @@ fn main() {
         Ok(_) => print!("{} countains: \n{}", display, s),
     }
 
-    //lice string s
-    println!("This is a test: \n{}", s);
+    let mut start: usize = 0;
+    each_word(&s, &mut start);
 }
 
-fn each_word(text: &str, start: &mut i32) -> &str {
+fn each_word<'a>(text: &'a str, start: &'a mut usize) -> String {
     let bytes = text.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
+    for (mut i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            println!("{}", &item[start..i]);
-            return each_word(text, i);
+            println!("{}", &text[*start..i]);
+            return each_word(text, &mut i);
         }
     }
 
-    &text[..]
+    text[..].to_string()
 }
