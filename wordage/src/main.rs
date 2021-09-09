@@ -23,4 +23,20 @@ fn main() {
         Err(why) => panic!("couldn't read {}: {}", display, why),
         Ok(_) => print!("{} countains: \n{}", display, s),
     }
+
+    //lice string s
+    println!("This is a test: \n{}", s);
+}
+
+fn each_word(text: &str, start: &mut i32) -> &str {
+    let bytes = text.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            println!("{}", &item[start..i]);
+            return each_word(text, i);
+        }
+    }
+
+    &text[..]
 }

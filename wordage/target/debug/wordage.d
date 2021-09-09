@@ -1,1 +1,1 @@
-/Users/gearhart/Documents/Github/Learning-Rust/wordage/target/debug/wordage: /Users/gearhart/Documents/Github/Learning-Rust/wordage/src/main.rs
+D:\krist\github\Learning-Rust\wordage\target\debug\wordage.exe: D:\krist\github\Learning-Rust\wordage\src\main.rs
