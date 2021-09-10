@@ -1,21 +1,19 @@
-use rand::{thread_rng, Rng};
-
+use rand::Rng;
 fn main() {
-    let mut rng = thread_rng();
+    let mut rng = rand::thread_rng();
 
     let rand_color = Color(
-        x: thread_rng.gen_range(0..250),
-        thread_rng.gen_range(0..250),
-        thread_rng.gen_range(0..250),
+        generate_color(&mut rng),
+        generate_color(&mut rng),
+        generate_color(&mut rng),
     );
+
+    println!("{:?}", rand_color);
 }
 
-struct Color {
-    x: i32,
-    y: i32,
-    z: i32,
-}
+#[derive(Debug)]
+struct Color(i32, i32, i32);
 
-fn generate_color() -> i32 {
-    32
+fn generate_color<R: Rng>(rng: &mut R) -> i32 {
+    rng.gen_range(0..256)
 }
