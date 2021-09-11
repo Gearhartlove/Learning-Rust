@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "triangle"
+name = "scuffed_triangle"
 version = "0.1.0"
