@@ -4,7 +4,9 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/mean_median_mode/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pig_latin/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/mean_median_mode/target" />
+      <excludeFolder url="file://$MODULE_DIR$/pig_latin/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
