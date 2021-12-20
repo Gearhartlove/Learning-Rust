@@ -6,9 +6,11 @@
       <sourceFolder url="file://$MODULE_DIR$/mean_median_mode/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/pig_latin/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/longest_common_prefix/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/generic_practice/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/mean_median_mode/target" />
       <excludeFolder url="file://$MODULE_DIR$/pig_latin/target" />
       <excludeFolder url="file://$MODULE_DIR$/longest_common_prefix/target" />
+      <excludeFolder url="file://$MODULE_DIR$/generic_practice/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
